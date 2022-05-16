@@ -1,0 +1,35 @@
+***** 220516 - 1장 ~ 4장
+
+* VS Code 터미널 명령어
+  - npm install -g [패키지명] : 패키지 설치
+    npm install [패키지명] --save : 설치한 패키지 정보가 package.json 에 추가됨
+  - vue create [프로젝트명] : 프로젝트 생성
+  - cd [프로젝트명] : 프로젝트 폴더로 이동
+  - npm run serve : 서버 실행 (기본 로컬 서버 http://localhost:8080/)
+    npm run serve -- --port [포트번호] : 포트번호 지정하여 서버 실행
+
+* Vue 파일 생성 및 시작
+  - /vue-project/src/App.vue
+  - /vue-project/src/router/index.js
+    import [메뉴명] from '../views/[파일명].vue'
+    {path: '', name: '', component: }
+  - /vue-project/vue.config.js
+
+
+
+prefetch 에 대한 개념이 아직 확실히 이해가 안되요....
+
+prefetch 는 미래에 사용할 수 있는 리소스를 미리 캐시에 저장함.
+prefech 기능을 사용하면 첫 하면 접속 시 랜더링 속도가 느려질 수 있음. 다만 화면 전환 시 빠른 성능을 가져옴.
+사용자가 접속 가능성 높은 컴포넌트는 prefech 적용하지 않고, 사용자의 접속 빈도 낮은 컴포넌트는 prefech 적용함.
+
+- prefetch 끄는 코드
+module.exports = {
+  chainWebpack: config => {
+    config.plugins.delete('prefetch'); // prefech 삭제
+  }
+}
+- prefetch 적용 코드 : component 를 import 로 넣을 때 앞에 /* webpackChunkName: "about" */ 주석을 추가로 넣어주면 됨
+component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue');
+    
+
