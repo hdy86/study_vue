@@ -7,12 +7,13 @@
   - cd [프로젝트명] : 프로젝트 폴더로 이동
   - npm run serve : 서버 실행 (기본 로컬 서버 http://localhost:8080/)
     npm run serve -- --port [포트번호] : 포트번호 지정하여 서버 실행
+  - vue ui : 프로젝트 매니저 실행
 
 * Vue 파일 생성 및 시작
-  - /vue-project/src/App.vue
   - /vue-project/src/router/index.js
     import [메뉴명] from '../views/[파일명].vue'
     {path: '', name: '', component: }
+  - /vue-project/src/App.vue
   - /vue-project/vue.config.js
 
 
