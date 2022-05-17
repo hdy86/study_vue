@@ -1,0 +1,35 @@
+***** 220517 - 5장 50%
+
+* 프로젝트 폴더
+  - /src/views/ : 페이지라 부르는 화면 하나하나
+  - /src/components/ : 공통으로 사용할 수 있는 vue 컴포넌트 파일
+
+* Snippet 설정
+  1. 파일(Code) -> 기본설정(Preference) -> User Snippets(사용자 코드 조각) -> vue 입력 -> vue (Vue) 선택하면 vue.json 파일 열림
+  2. vue.json 파일 안에 코드 등록
+    "Generate Basic Vue Code" : {
+		"prefix": "vue-start",
+		"body" : [
+			"<template></template>\n<script>\nexport default {\n\tname: '',\n\tcomponents: {},\n\tdata() {\n\t\treturn {\n\t\t\tsampleData: ''\n\t\t};\n\t},\n\tbeforeCreate() {},\n\tcreated() {},\n\tbeforeMount() {},\n\tmounted() {},\n\tbeforeUpdate() {},\n\tupdated() {},\n\tbeforeUnmount() {},\n\tunmounted() {},\n\tmethods: {}\n}\n</script>"
+		],
+		"description": "Generate Basic Vue Code"
+	}
+  3. 등록한 코드의 prefix 명칭(위의 경우, vue-start)으로 입력하면 snippet 사용 가능
+
+* 라이프사이클(Lifecycle Hooks)
+  - created() : 화면 접속하자마자 실행
+  - mounted() : 화면 로딩 후 실행
+  - unmounted() : unmount 완료된 후 실행
+  - 그 밖에도 beforeCreate, beforeMount, beforeUpdate, updated, beforeUnmount 등이 있음
+
+* 데이터바인딩(Data Binding)
+  - 텍스트 : {{ ... }}
+  - html 태그 : v-html=" ... "
+  - input text, select, textarea 의 value 값 : v-model=" ... "
+  - input number 의 value 값 : v-model.number=" ... "
+  - input checkbox, input radio 의 checked : v-model=" ... " / 스크립트 true, false
+    input checkbox, input radio 의 value 값 : v-bind:value=" ... "
+    input checkbox checked 와 value 값 같이 사용할 경우 기본값 설정 : true-value="yes" false-value="no" (이거 안쓰면 checked 가 true, false 되면서 label 텍스트도 같이 바뀜)
+  - input checkbox 에 v-model=" ... " 하고, 스크립트에 ... : [] 와 같이 배열로 해두면 checked 된 value 값이 배열에 저장됨
+  - input radio 에 v-model=" ... " 하고, 스크립트에 ... : '' 와 같이 텍스트 영역으로 해두면 checked 된 value 값이 텍스트로 저장됨
+
