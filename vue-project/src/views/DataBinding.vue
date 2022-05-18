@@ -28,7 +28,19 @@
         <label><input type="radio" v-bind:value="radioValue1" v-model="picked"> 서울</label>
         <label><input type="radio" v-bind:value="radioValue2" v-model="picked"> 부산</label>
         <label><input type="radio" v-bind:value="radioValue3" v-model="picked"> 제주</label><br>
-        <span>선택한 지역: {{picked}}</span>
+        <span>선택한 지역: {{picked}}</span><br><br>
+
+        <img v-bind:src="imgSrc" /><br><br> <!-- img 의 src 속성 : v-bind:src=" ... " -->
+        
+        <input type="text" v-model="textValue">
+        <button type="button" v-bind:disabled="textValue==''">Click</button><br><br> <!-- input text 에 값이 입력되면 button 이 활성화됨 -->
+
+        <div class="container" v-bind:class="{'active': isActive, 'text-red': hasError}">Class Binding</div><br> <!-- class 를 true, false 로 설정 가능 -->
+        <div class="container" v-bind:class="[activeClass, errorClass]">Class Binding2</div><br> <!-- class 를 배열로 담아서 사용 가능 -->
+        <div class="container" v-bind:class="twoClass">Class Binding2-2</div><br><br>
+
+        <div v-bind:style="styleObject">인라인 스타일 바인딩</div><br>
+        <div v-bind:style="[baseStyle, addStyle]">인라인 스타일 바인딩2</div> <!-- 인라인 스타일을 배열로 담아서 사용 가능 -->
     </div>
 </template>
 <script>
@@ -49,8 +61,27 @@ export default {
             picked: '',
             radioValue1: '서울',
             radioValue2: '부산',
-            radioValue3: '제주'
+            radioValue3: '제주',
+
+            imgSrc: "https://kr.vuejs.org/images/logo.png",
+
+            textValue: "",
+
+            isActive: true,
+            hasError: false,
+            activeClass: 'active',
+            errorClass: 'text-red',
+            twoClass: 'active text-red',
+
+            styleObject: {color:'blue', fontSize:'13px'},
+            baseStyle: 'background-color:purple; width:100%; height:200px;',
+            addStyle: 'color:white; font-weight:bold;'
         };
     }
 }
 </script>
+<style scoped>
+    .container{width:100%; height:200px;}
+    .active{background-color:yellow; font-weight:bold;}
+    .text-red{color:red;}
+</style>
