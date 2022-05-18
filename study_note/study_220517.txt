@@ -1,4 +1,4 @@
-***** 220517 - 5장 50%
+***** 220517 ~ 220518 - 5장 75%
 
 * 프로젝트 폴더
   - /src/views/ : 페이지라 부르는 화면 하나하나
@@ -32,4 +32,11 @@
     input checkbox checked 와 value 값 같이 사용할 경우 기본값 설정 : true-value="yes" false-value="no" (이거 안쓰면 checked 가 true, false 되면서 label 텍스트도 같이 바뀜)
   - input checkbox 에 v-model=" ... " 하고, 스크립트에 ... : [] 와 같이 배열로 해두면 checked 된 value 값이 배열에 저장됨
   - input radio 에 v-model=" ... " 하고, 스크립트에 ... : '' 와 같이 텍스트 영역으로 해두면 checked 된 value 값이 텍스트로 저장됨
+  - 속성 넣을 때 : v-bind: 나 : 사용
+    ex) v-bind:disabled=" ... " / v-bind:class=" ... " / v-bind:style=" ... "
+
+  - v-for="(item, index) in items"
+  - v-if=" ... " / v-else-if=" ... " / v-else
+    v-show=" ... "
+    토글이 자주 일어나면 v-show, toggle 일어나는 빈도가 작다면 v-if 사용
 
