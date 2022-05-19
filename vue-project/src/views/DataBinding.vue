@@ -40,48 +40,78 @@
         <div class="container" v-bind:class="twoClass">Class Binding2-2</div><br><br>
 
         <div v-bind:style="styleObject">인라인 스타일 바인딩</div><br>
-        <div v-bind:style="[baseStyle, addStyle]">인라인 스타일 바인딩2</div> <!-- 인라인 스타일을 배열로 담아서 사용 가능 -->
+        <div v-bind:style="[baseStyle, addStyle]">인라인 스타일 바인딩2</div><br><br> <!-- 인라인 스타일을 배열로 담아서 사용 가능 -->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>제품명</th>
+                    <th>가격</th>
+                    <th>카테고리</th>
+                    <th>배송료</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr :key="i" v-for="(product, i) in productList"> <!-- :key="i" ??? -->
+                    <td>{{product.product_name}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.delivery_price}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </template>
 <script>
-export default {
-    data() {
-        return {
-            title: 'World',
-            htmlString: '<p style="color:red;">This is a red string.<p>',
+    export default {
+        data() {
+            return {
+                title: 'World',
+                htmlString: '<p style="color:red;">This is a red string.<p>',
 
-            valueModel: 'South Korea',
-            numberModel: 3,
-            message: "여러 줄을 입력할 수 있는 textarea 입니다.",
-            city: "064",
-            
-            checked: true,
-            checked2: [],
+                valueModel: 'South Korea',
+                numberModel: 3,
+                message: "여러 줄을 입력할 수 있는 textarea 입니다.",
+                city: "064",
+                
+                checked: true,
+                checked2: [],
 
-            picked: '',
-            radioValue1: '서울',
-            radioValue2: '부산',
-            radioValue3: '제주',
+                picked: '',
+                radioValue1: '서울',
+                radioValue2: '부산',
+                radioValue3: '제주',
 
-            imgSrc: "https://kr.vuejs.org/images/logo.png",
+                imgSrc: "https://kr.vuejs.org/images/logo.png",
 
-            textValue: "",
+                textValue: "",
 
-            isActive: true,
-            hasError: false,
-            activeClass: 'active',
-            errorClass: 'text-red',
-            twoClass: 'active text-red',
+                isActive: true,
+                hasError: false,
+                activeClass: 'active',
+                errorClass: 'text-red',
+                twoClass: 'active text-red',
 
-            styleObject: {color:'blue', fontSize:'13px'},
-            baseStyle: 'background-color:purple; width:100%; height:200px;',
-            addStyle: 'color:white; font-weight:bold;'
-        };
+                styleObject: {color:'blue', fontSize:'13px'},
+                baseStyle: 'background-color:purple; width:100%; height:200px;',
+                addStyle: 'color:white; font-weight:bold;',
+                
+                productList: [
+                    {"product_name":"기계식키보드", "price":25000, "category":"노트북/태블릿", "delivery_price":5000},
+                    {"product_name":"무선마우스", "price":12000, "category":"노트북/태블릿", "delivery_price":5000},
+                    {"product_name":"아이패드", "price":725000, "category":"노트북/태블릿", "delivery_price":5000},
+                    {"product_name":"태블릿거치대", "price":32000, "category":"노트북/태블릿", "delivery_price":5000},
+                    {"product_name":"무선충전기", "price":42000, "category":"노트북/태블릿", "delivery_price":5000}
+                ],
+            };
+        }
     }
-}
 </script>
 <style scoped>
     .container{width:100%; height:200px;}
     .active{background-color:yellow; font-weight:bold;}
     .text-red{color:red;}
+
+    table{font-family:arial, sans-serif; border-collapse:collapse; width:100%;}
+    th, td{border:1px solid #ddd; text-align:left; padding:8px;}
 </style>
