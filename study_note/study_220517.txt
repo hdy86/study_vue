@@ -1,4 +1,4 @@
-***** 220517 ~ 220518 - 5장 75%
+***** 220517 ~ 220519 - 5장
 
 * 프로젝트 폴더
   - /src/views/ : 페이지라 부르는 화면 하나하나
@@ -22,6 +22,7 @@
   - unmounted() : unmount 완료된 후 실행
   - 그 밖에도 beforeCreate, beforeMount, beforeUpdate, updated, beforeUnmount 등이 있음
 
+
 * 데이터바인딩(Data Binding)
   - 텍스트 : {{ ... }}
   - html 태그 : v-html=" ... "
@@ -35,8 +36,23 @@
   - 속성 넣을 때 : v-bind: 나 : 사용
     ex) v-bind:disabled=" ... " / v-bind:class=" ... " / v-bind:style=" ... "
 
+* 랜더링 문법
   - v-for="(item, index) in items"
   - v-if=" ... " / v-else-if=" ... " / v-else
     v-show=" ... "
     토글이 자주 일어나면 v-show, toggle 일어나는 빈도가 작다면 v-if 사용
+
+* 이벤트
+  - 이벤트 처리 : v-on: 이나 @ 사용 / 함수는 methods: 안에 작성
+  - key 이벤트 : @keyup.enter=" ... " 와 같이 작성
+    .enter / .tab / .delete(Del키, Backspace키) / .esc / .space / .up / .down / .left / .right 등이 있음
+
+    다른 키와 같이 사용하는 특수키 예시)
+    @keyup.alt.enter=" ... " : Alt + Enter
+    @keyup.ctrl.enter=" ... " : Ctrl + Enter
+    @click.ctrl=" ... " : Ctrl + Click
+
+* Computed / Watch
+  - Computed 와 Watch 둘 다 Vue 인스턴스 내의 정의된 데이터 값 변경 일어나는 것 감지
+    다만 Watch 는 실제 데이터 변경이 일어나기 전까지 실행되지 않음
 
