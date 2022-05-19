@@ -49,15 +49,19 @@ GitHub 에서 리포지토리 생성
 VS Code 에서 탐색기 -> 리포지토리 복제 -> GitHub 에서 만든 리포지토리 링크 복사해와서 붙여넣고 Enter -> 컴퓨터에 폴더 하나 만들어서 지정해주기
 
 VS Code 에 터미널에..
-    git config —global user.name '[user_name]'
-    git config —global user.email '[user_email]'
+    git config —-global user.name '[user_name]'
+    git config —-global user.email '[user_email]'
 입력해서 설정 후...
-    git config —list
+    git config --list
 설정 확인
 
 VS Code 에 터미널에..
     git push origin main
 입력하고 git 로그인해서 인증하기
+
+※ mac과 window의 개행문자 차이로 동일한 파일 무분별하게 올라가는거 막기
+    git config --global core.autocrlf true (window)
+    git config --global core.autocrlf input (mac)
 
 
 
