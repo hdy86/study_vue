@@ -59,7 +59,7 @@ VS Code 에 터미널에..
     git push origin main
 입력하고 git 로그인해서 인증하기
 
-※ mac과 window의 개행문자 차이로 동일한 파일 무분별하게 올라가는거 막기
+※ 개행문자 설정
     git config --global core.autocrlf true (window)
     git config --global core.autocrlf input (mac)
 
