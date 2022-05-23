@@ -1,0 +1,79 @@
+***** 220523 - 6장 ~ 7장
+
+
+
+/* ====================================
+    SETTING - Mock 서버
+===================================== */
+
+***** Postman
+https://www.postman.com/downloads/
+- postman 다운로드
+
+Postman 다운받아서 로그인 후
+Home 에서 Get started with Postman 아래에 Start with something new 안에 Create New 버튼 클릭
+Mock Server 클릭
+Request URL 에 test 입력 후 Next 버튼 클릭
+Mock server name 에 서버이름(ex. Mock Server 01) 입력 후 Create Mock Server 버튼 클릭
+    https://05061a3f-d606-4f45-b048-448db1846b75.mock.pstmn.io (Mock Server 01)
+    https://2f19972c-8eca-462d-a7be-7c3fd874deb9.mock.pstmn.io (Mock Server 02)
+만들어진 이 링크가 서버 URL
+
+오른쪽 화면 상단에 있는 No Environment 쓰여있는 콤보박스 클릭해서 만든 서버이름(Mock Server 01) 선택
+Collections 탭 클릭 -> 서버이름(Mock Server 01) 안에 test 안에 Default 클릭
+Body 부분 Text로 되어있는 콤보박스 JSON 으로 선택 후, 안에 예시 데이터 입력
+    {
+        "name":"Hong",
+        "city":"Suwon",
+        "gender":"Female"
+    }
+Save 버튼 클릭해서 저장. 이와 같은 방식으로 서버내 API 추가 가능
+
+서버이름(Mock Server 01) 클릭해서 오른쪽 화면 상단에 Run 버튼 클릭
+Run 서버이름(Mock Server 01) 클릭하면 Mock 서버 실행됨
+Get test 라고 쓰여있는 곳의 test 클릭해서 Request URL 클릭하면 URL 볼 수 있음
+
+
+
+***** Axios
+* Axios 설치
+VS Code 터미널에..
+    npm install axios --save
+입력으로 설치
+
+* Axios request methods
+- axios.request(config)
+- axios.options(url[, config])
+- axios.get(url[, config])
+- axios.post(url[, data[, config]])
+- axios.delete(url[, config])
+- axios.put(url[, data[, config]])
+- axios.head(url[, config])
+- axios.patch(ufl[, data[, config]])
+
+
+
+***** 믹스인(Mixins)
+mixins.js 파일 만들고, VS Code 에 설정 해주기
+
+
+
+***** Mock 서버에 API 등록
+서버이름(Mock Server 01) 오른쪽에 ... 버튼 클릭 후 Add Request 클릭
+새로 만들어진 GET New Request 오른쪽에 ... 버튼 클릭 후 Rename 클릭해서 이름 list 로 변경
+GET list 클릭 후 GET 콤보박스 옆에 {{url}}/list 입력
+오른쪽 화면 상단에 ... 클릭해서 Add Example 클릭
+list 파일의 Body 부분에 콤보박스 JSON 으로 선택 후, 데이터 입력
+    [
+        {"product_name":"기계식키보드", "price":25000, "category":"노트북/태블릿", "delivery_price":5000},
+        {"product_name":"무선마우스", "price":12000, "category":"노트북/태블릿", "delivery_price":5000},
+        {"product_name":"아이패드", "price":725000, "category":"노트북/태블릿", "delivery_price":5000},
+        {"product_name":"태블릿거치대", "price":32000, "category":"노트북/태블릿", "delivery_price":5000},
+        {"product_name":"무선충전기", "price":42000, "category":"노트북/태블릿", "delivery_price":5000},
+    ]
+
+서버이름(Mock Server 01) 클릭해서 오른쪽 화면 상단에 Run 버튼 클릭
+Run 서버이름(Mock Server 01) 클릭하면 Mock 서버 실행됨
+왼쪽 하단에 Console 버튼을 눌러서 URL 확인 가능
+
+
