@@ -2,7 +2,12 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link to="/databinding">Data Binding</router-link>
+    <router-link to="/databinding">Data Binding</router-link> |
+    <router-link to="/renderingvif">Rendering</router-link> |
+    <router-link to="/eventvon">Event</router-link> |
+    <router-link to="/computedtest">Computed</router-link> |
+    <router-link to="/watchtest">Watch</router-link> |
+    <router-link to="/databindinglist2">Table</router-link>
   </nav>
   <router-view/>
 </template>

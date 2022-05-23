@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DataBinding from '../views/DataBinding.vue'
-import DataBindingList2 from '../views/DataBindingList2.vue'
 import RenderingVIf from '../views/RenderingVIf.vue'
 import EventVOn from '../views/EventVOn.vue'
 import ComputedTest from '../views/ComputedTest.vue'
 import WatchTest from '../views/WatchTest.vue'
+import DataBindingList2 from '../views/DataBindingList2.vue'
 
 const routes = [
   {
@@ -27,11 +27,6 @@ const routes = [
     component: DataBinding
   },
   {
-    path: '/databindinglist2',
-    name: 'DataBindingList2',
-    component: DataBindingList2
-  },
-  {
     path: '/renderingvif',
     name: 'renderingvif',
     component: RenderingVIf
@@ -50,6 +45,11 @@ const routes = [
     path: '/watchtest',
     name: 'watchtest',
     component: WatchTest
+  },
+  {
+    path: '/databindinglist2',
+    name: 'DataBindingList2',
+    component: DataBindingList2
   }
 ]
 
