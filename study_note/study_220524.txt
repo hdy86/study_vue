@@ -1,0 +1,38 @@
+***** 220524 - 8장
+
+* 컴포넌트 안에서 컴포넌트 사용
+  1. /src/components/ 폴더 안에 vue 파일(ex. ComponentA.vue) 만듬
+  2. 사용할 컴포넌트 파일에서..
+     import ComponentA from '../components/ComponentA'; 로 import 해주고,
+     components: {ComponentA} 로 컴포넌트 등록해주고,
+     html 부분에 <ComponentA /> 로 태그 사
+
+* 컴포넌트에서 데이터 전달
+  - 정적 전달 : title="제목"
+  - 동적 전달 : v-bind 약어인 : 사용해서 데이터 전달
+    :title="title"
+    return { title: '제목' };
+  - 문자열(String)을 제외한 숫자형(Number), 논리 자료형(Boolean), 배열(Array), 객체(Object) 모두 v-bind 사용하여 동적으로 전달해야 함
+  - 객체의 속성으로 전달할 때는 v-bind=" ... " 로 작성
+
+* 다른 컴포넌트에서 이벤트 발생
+자식 컴포넌트의 button 에 ref="btn" 속성을 적어주고,
+부모 컴포넌트의 자식 컴포넌트 뿌려주는 부분에 ref=" ... " 자식 컴포넌트 이름 적어주고,
+mounted 안에 $refs 를 사용해서 접근 가능
+
+* 다른 컴포넌트로 이벤트/데이터 전달
+자식 컴포넌트에서 mounted 안에 $emit으로 데이터 전달
+부모 컴포넌트의 자식 컴포넌트 뿌려주는 부분에 @... 하고 $emit 한 이름 넣어주면 호출됨
+
+
+
+
+
+※ 책에 오타가 있는 것 같아요
+   1. p 156
+      <page-title: title="title" /> 가 아니고,
+      <page-title :title="title" /> 인 듯
+   2. p 158
+      <blog-post :author="{name: 'Veronica', 'Veridian Dynamics'}" /> 은 작동 안되고,
+      <blog-post :author="{name: 'Veronica'}" /> 나
+      <blog-post :author="{name1: 'Veronica', name2: 'Veridian Dynamics'}" /> 으로 작성해야 작동함
