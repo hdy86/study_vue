@@ -6,6 +6,11 @@ import EventVOn from '../views/EventVOn.vue'
 import ComputedTest from '../views/ComputedTest.vue'
 import WatchTest from '../views/WatchTest.vue'
 import DataBindingList2 from '../views/DataBindingList2.vue'
+import NestedComponent from '../views/NestedComponent.vue'
+import ChildComponent from '../views/ChildComponent.vue'
+import ParentComponent from '../views/ParentComponent.vue'
+import ChildComponent5 from '../views/ChildComponent5.vue'
+import ParentComponent5 from '../views/ParentComponent5.vue'
 
 const routes = [
   {
@@ -50,6 +55,31 @@ const routes = [
     path: '/databindinglist2',
     name: 'DataBindingList2',
     component: DataBindingList2
+  },
+  {
+    path: '/nestedcomponent',
+    name: 'NestedComponent',
+    component: NestedComponent
+  },
+  {
+    path: '/childcomponent',
+    name: 'ChildComponent',
+    component: ChildComponent
+  },
+  {
+    path: '/parentcomponent',
+    name: 'ParentComponent',
+    component: ParentComponent
+  },
+  {
+    path: '/childcomponent5',
+    name: 'ChildComponent5',
+    component: ChildComponent5
+  },
+  {
+    path: '/parentcomponent5',
+    name: 'ParentComponent5',
+    component: ParentComponent5
   }
 ]
 
