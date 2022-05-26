@@ -26,7 +26,7 @@
     import PageTitle from '../components/PageTitle'; // 컴포넌트 import
     import BlogPost from '../components/BlogPost';
     export default {
-        components: {PageTitle, BlogPost}, // 현재 컴포넌트에서 사용할 컴포넌트 등록
+        components: {PageTitle, 'page-title': PageTitle, 'blog-post': BlogPost}, // 현재 컴포넌트에서 사용할 컴포넌트 등록
         data() {
             return{
                 title: '동적 페이지 타이틀',

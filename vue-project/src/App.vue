@@ -6,11 +6,17 @@
     <router-link to="/renderingvif">Rendering</router-link> |
     <router-link to="/eventvon">Event</router-link> |
     <router-link to="/computedtest">Computed</router-link> |
-    <router-link to="/watchtest">Watch</router-link><br>
-    <router-link to="/databindinglist2">Table Data</router-link> |
+    <router-link to="/watchtest">Watch</router-link> |
+    <router-link to="/databindinglist2">Table Data</router-link><br>
     <router-link to="/nestedcomponent">Component Data</router-link> |
-    <router-link to="/childcomponent">Child Comp</router-link> |
-    <router-link to="/parentcomponent">Parent Comp</router-link>
+    <router-link to="/childcomponent">Child Comp</router-link>&nbsp;
+    <router-link to="/parentcomponent">Parent Comp</router-link> |
+    <router-link to="/childcomponent5">Child Comp5</router-link>&nbsp;
+    <router-link to="/parentcomponent5">Parent Comp5</router-link> |
+    <router-link to="/slotmodallayout">Slot</router-link>&nbsp;
+    <router-link to="/slotusemodallayout">Slot Use</router-link> |
+    <router-link to="/provideinject">ProvideInject</router-link>&nbsp;
+    <router-link to="/provideinjectchild">ProvideInjectChild</router-link>
   </nav>
   <router-view />
 </template>
