@@ -8,15 +8,28 @@
     <router-link to="/computedtest">Computed</router-link> |
     <router-link to="/watchtest">Watch</router-link> |
     <router-link to="/databindinglist2">Table Data</router-link><br>
+
     <router-link to="/nestedcomponent">Component Data</router-link> |
-    <router-link to="/childcomponent">Child Comp</router-link>&nbsp;
-    <router-link to="/parentcomponent">Parent Comp</router-link> |
-    <router-link to="/childcomponent5">Child Comp5</router-link>&nbsp;
-    <router-link to="/parentcomponent5">Parent Comp5</router-link> |
-    <router-link to="/slotmodallayout">Slot</router-link>&nbsp;
+    <router-link to="/childcomponent">Child Compn</router-link> , 
+    <router-link to="/parentcomponent">Parent Compn</router-link> |
+    <router-link to="/childcomponent5">Child Compn5</router-link> , 
+    <router-link to="/parentcomponent5">Parent Compn5</router-link> |
+    <router-link to="/slotmodallayout">Slot</router-link> , 
     <router-link to="/slotusemodallayout">Slot Use</router-link> |
-    <router-link to="/provideinject">ProvideInject</router-link>&nbsp;
-    <router-link to="/provideinjectchild">ProvideInjectChild</router-link>
+    <router-link to="/provideinject">ProvideInject</router-link> , 
+    <router-link to="/provideinjectchild">ProvideInjectChild</router-link><br>
+
+    <router-link to="/calcultest">Calculator</router-link> , 
+    <router-link to="/compositionapi">CompsAPI</router-link> , 
+    <router-link to="/compositionapi2">CompsAPI2</router-link> , 
+    <router-link to="/compositionapi3">CompsAPI3</router-link> , 
+    <router-link to="/compositionapi4">CompsAPI4</router-link> |
+    <router-link to="/compositionapiprovide">CompsAPIProvide</router-link> , 
+    <router-link to="/compositionapiinject">CompsAPIInject</router-link> |
+    <router-link to="/mixins">Mixins</router-link> , 
+    <router-link to="/component">MixinsCheck</router-link> | 
+    <router-link to="/customdirective">CustomDirective</router-link> | 
+    <router-link to="/pluginstest">Plugins</router-link>
   </nav>
   <router-view />
 </template>

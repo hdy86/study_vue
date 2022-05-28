@@ -6,6 +6,7 @@ import EventVOn from '../views/EventVOn.vue'
 import ComputedTest from '../views/ComputedTest.vue'
 import WatchTest from '../views/WatchTest.vue'
 import DataBindingList2 from '../views/DataBindingList2.vue'
+
 import NestedComponent from '../views/NestedComponent.vue'
 import ChildComponent from '../views/ChildComponent.vue'
 import ParentComponent from '../views/ParentComponent.vue'
@@ -15,6 +16,18 @@ import SlotModalLayout from '../views/SlotModalLayout.vue'
 import SlotUseModalLayout from '../views/SlotUseModalLayout.vue'
 import ProvideInject from '../views/ProvideInject.vue'
 import ProvideInjectChild from '../views/ProvideInjectChild.vue'
+
+import CalculTest from '../views/CalculTest.vue'
+import CompositionAPI from '../views/CompositionAPI.vue'
+import CompositionAPI2 from '../views/CompositionAPI2.vue'
+import CompositionAPI3 from '../views/CompositionAPI3.vue'
+import CompositionAPI4 from '../views/CompositionAPI4.vue'
+import CompositionAPIProvide from '../views/CompositionAPIProvide.vue'
+import CompositionAPIInject from '../views/CompositionAPIInject.vue'
+import MixinS from '../views/MixinS.vue'
+import Component from '../views/Component.vue'
+import CustomDirective from '../views/CustomDirective.vue'
+import PluginsTest from '../views/PluginsTest.vue'
 
 const routes = [
   {
@@ -104,6 +117,61 @@ const routes = [
     path: '/provideinjectchild',
     name: 'ProvideInjectChild',
     component: ProvideInjectChild
+  },
+  {
+    path: '/calcultest',
+    name: 'CalculTest',
+    component: CalculTest
+  },
+  {
+    path: '/compositionapi',
+    name: 'CompositionAPI',
+    component: CompositionAPI
+  },
+  {
+    path: '/compositionapi2',
+    name: 'CompositionAPI2',
+    component: CompositionAPI2
+  },
+  {
+    path: '/compositionapi3',
+    name: 'CompositionAPI3',
+    component: CompositionAPI3
+  },
+  {
+    path: '/compositionapi4',
+    name: 'CompositionAPI4',
+    component: CompositionAPI4
+  },
+  {
+    path: '/compositionapiprovide',
+    name: 'CompositionAPIProvide',
+    component: CompositionAPIProvide
+  },
+  {
+    path: '/compositionapiinject',
+    name: 'CompositionAPIInject',
+    component: CompositionAPIInject
+  },
+  {
+    path: '/mixins',
+    name: 'MixinS',
+    component: MixinS
+  },
+  {
+    path: '/Component',
+    name: 'Component',
+    component: Component
+  },
+  {
+    path: '/customdirective',
+    name: 'CustomDirective',
+    component: CustomDirective
+  },
+  {
+    path: '/pluginstest',
+    name: 'PluginsTest',
+    component: PluginsTest
   }
 ]
 
