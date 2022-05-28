@@ -1,0 +1,37 @@
+***** 220528 - 9장
+
+* Composition API
+  Setup 이라는 메소드 안에서 한 덩어리로 코드 구현 가능
+  1. reactive 사용해서 변경되는 값 설정
+  2. computed 사용해서 계산하는 값 변환하여 지정
+  3. toRefs 사용해서 외부 function 만들었을 때의 값 내보내줌
+  4. provide 사용해서 키(key), 값(value) 설정해서 내보내줌
+     inject 사용해서 부모 컴포넌트에서 보낸 값 가져와서 넣음
+
+* Lifecycle Hooks
+
+Options API         Hook inside setup()
+-----------------------------------------
+before Create
+created
+beforeMount         onBeforeMount
+mounted             onMounted
+beforeUpdate        onBeforeUpdate
+updated             onUpdated
+beforeUnmount       onBeforeUnmount
+unmounted           onUnmounted
+errorCaptured       onErrorCaptured
+renderTracked       onRenderTracked
+renderTriggered     onRenderTriggered
+
+* 믹스인(Mixins)
+  기능을 따로 구현하고, 필요할 때마다 믹스인 파일을 컴포넌트에 결합해서 사용하는 방법
+  믹스인 파일의 메소드명은 앞에 $를 붙여서 구분하여 만들 수 있음
+
+* Custom Directives
+  directive: { ... } 안에 명칭 지정해서 디렉티브 만들고, v-... 와 같이 html에 입력해서 사용 가능
+
+* Plugins
+  플러그인명.js 파일 만들어서 플러그인 직접 만들어 활용 가능
+
+
