@@ -29,6 +29,8 @@ import Component from '../views/Component.vue'
 import CustomDirective from '../views/CustomDirective.vue'
 import PluginsTest from '../views/PluginsTest.vue'
 
+import StoreAccess from '../views/StoreAccess.vue'
+
 const routes = [
   {
     path: '/',
@@ -172,6 +174,11 @@ const routes = [
     path: '/pluginstest',
     name: 'PluginsTest',
     component: PluginsTest
+  },
+  {
+    path: '/storeaccess',
+    name: 'StoreAccess',
+    component: StoreAccess
   }
 ]
 

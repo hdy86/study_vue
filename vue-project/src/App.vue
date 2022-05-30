@@ -29,7 +29,9 @@
     <router-link to="/mixins">Mixins</router-link> , 
     <router-link to="/component">MixinsCheck</router-link> | 
     <router-link to="/customdirective">CustomDirective</router-link> | 
-    <router-link to="/pluginstest">Plugins</router-link>
+    <router-link to="/pluginstest">Plugins</router-link><br>
+    
+    <router-link to="/StoreAccess">StoreAccess</router-link>
   </nav>
   <router-view />
 </template>
