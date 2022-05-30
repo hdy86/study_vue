@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_project"]=self["webpackChunkvue_project"]||[]).push([[336],{5024:function(t,e,n){n.r(e),n.d(e,{default:function(){return f}});var r=n(6252),u=n(3577);function c(t,e,n,c,i,l){return(0,r.wg)(),(0,r.iD)("h1",null,(0,u.zw)(c.title),1)}var i={setup(){const t=(0,r.f3)("title");return{title:t}}},l=n(3744);const s=(0,l.Z)(i,[["render",c]]);var f=s}}]);
+//# sourceMappingURL=compositionapiinject.dbe40493.js.map

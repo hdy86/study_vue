@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_project"]=self["webpackChunkvue_project"]||[]).push([[450],{7825:function(e,t,n){n.r(t),n.d(t,{default:function(){return s}});var r=n(6252);function u(e,t,n,u,c,i){return(0,r.wg)(),(0,r.iD)("div")}var c={inject:["itemLength"],mounted(){console.log(this.itemLength)}},i=n(3744);const o=(0,i.Z)(c,[["render",u]]);var s=o}}]);
+//# sourceMappingURL=provideinjectchild.b3ec8a6f.js.map
