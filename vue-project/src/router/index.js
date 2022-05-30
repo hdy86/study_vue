@@ -1,35 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import DataBinding from '../views/DataBinding.vue'
-import RenderingVIf from '../views/RenderingVIf.vue'
-import EventVOn from '../views/EventVOn.vue'
-import ComputedTest from '../views/ComputedTest.vue'
-import WatchTest from '../views/WatchTest.vue'
-import DataBindingList2 from '../views/DataBindingList2.vue'
-
-import NestedComponent from '../views/NestedComponent.vue'
-import ChildComponent from '../views/ChildComponent.vue'
-import ParentComponent from '../views/ParentComponent.vue'
-import ChildComponent5 from '../views/ChildComponent5.vue'
-import ParentComponent5 from '../views/ParentComponent5.vue'
-import SlotModalLayout from '../views/SlotModalLayout.vue'
-import SlotUseModalLayout from '../views/SlotUseModalLayout.vue'
-import ProvideInject from '../views/ProvideInject.vue'
-import ProvideInjectChild from '../views/ProvideInjectChild.vue'
-
-import CalculTest from '../views/CalculTest.vue'
-import CompositionAPI from '../views/CompositionAPI.vue'
-import CompositionAPI2 from '../views/CompositionAPI2.vue'
-import CompositionAPI3 from '../views/CompositionAPI3.vue'
-import CompositionAPI4 from '../views/CompositionAPI4.vue'
-import CompositionAPIProvide from '../views/CompositionAPIProvide.vue'
-import CompositionAPIInject from '../views/CompositionAPIInject.vue'
-import MixinS from '../views/MixinS.vue'
-import Component from '../views/Component.vue'
-import CustomDirective from '../views/CustomDirective.vue'
-import PluginsTest from '../views/PluginsTest.vue'
-
-import StoreAccess from '../views/StoreAccess.vue'
 
 const routes = [
   {
@@ -48,137 +18,137 @@ const routes = [
   {
     path: '/databinding',
     name: 'DataBinding',
-    component: DataBinding
+    component: () => import(/* webpackChunkName: "databinding" */ '../views/DataBinding.vue')
   },
   {
     path: '/renderingvif',
     name: 'renderingvif',
-    component: RenderingVIf
+    component: () => import(/* webpackChunkName: "renderingvif" */ '../views/RenderingVIf.vue')
   },
   {
     path: '/eventvon',
     name: 'eventvon',
-    component: EventVOn
+    component: () => import(/* webpackChunkName: "eventvon" */ '../views/EventVOn.vue')
   },
   {
     path: '/computedtest',
     name: 'computedtest',
-    component: ComputedTest
+    component: () => import(/* webpackChunkName: "computedtest" */ '../views/ComputedTest.vue')
   },
   {
     path: '/watchtest',
     name: 'watchtest',
-    component: WatchTest
+    component: () => import(/* webpackChunkName: "watchtest" */ '../views/WatchTest.vue')
   },
   {
     path: '/databindinglist2',
     name: 'DataBindingList2',
-    component: DataBindingList2
+    component: () => import(/* webpackChunkName: "databindinglist2" */ '../views/DataBindingList2.vue')
   },
   {
     path: '/nestedcomponent',
     name: 'NestedComponent',
-    component: NestedComponent
+    component: () => import(/* webpackChunkName: "nestedcomponent" */ '../views/NestedComponent.vue')
   },
   {
     path: '/childcomponent',
     name: 'ChildComponent',
-    component: ChildComponent
+    component: () => import(/* webpackChunkName: "childcomponent" */ '../views/ChildComponent.vue')
   },
   {
     path: '/parentcomponent',
     name: 'ParentComponent',
-    component: ParentComponent
+    component: () => import(/* webpackChunkName: "parentcomponent" */ '../views/ParentComponent.vue')
   },
   {
     path: '/childcomponent5',
     name: 'ChildComponent5',
-    component: ChildComponent5
+    component: () => import(/* webpackChunkName: "childcomponent5" */ '../views/ChildComponent5.vue')
   },
   {
     path: '/parentcomponent5',
     name: 'ParentComponent5',
-    component: ParentComponent5
+    component: () => import(/* webpackChunkName: "parentcomponent5" */ '../views/ParentComponent5.vue')
   },
   {
     path: '/slotmodallayout',
     name: 'SlotModalLayout',
-    component: SlotModalLayout
+    component: () => import(/* webpackChunkName: "slotmodallayout" */ '../views/SlotModalLayout.vue')
   },
   {
     path: '/slotusemodallayout',
     name: 'SlotUseModalLayout',
-    component: SlotUseModalLayout
+    component: () => import(/* webpackChunkName: "slotusemodallayout" */ '../views/SlotUseModalLayout.vue')
   },
   {
     path: '/provideinject',
     name: 'ProvideInject',
-    component: ProvideInject
+    component: () => import(/* webpackChunkName: "provideinject" */ '../views/ProvideInject.vue')
   },
   {
     path: '/provideinjectchild',
     name: 'ProvideInjectChild',
-    component: ProvideInjectChild
+    component: () => import(/* webpackChunkName: "provideinjectchild" */ '../views/ProvideInjectChild.vue')
   },
   {
     path: '/calcultest',
     name: 'CalculTest',
-    component: CalculTest
+    component: () => import(/* webpackChunkName: "calcultest" */ '../views/CalculTest.vue')
   },
   {
     path: '/compositionapi',
     name: 'CompositionAPI',
-    component: CompositionAPI
+    component: () => import(/* webpackChunkName: "compositionapi" */ '../views/CompositionAPI.vue')
   },
   {
     path: '/compositionapi2',
     name: 'CompositionAPI2',
-    component: CompositionAPI2
+    component: () => import(/* webpackChunkName: "compositionapi2" */ '../views/CompositionAPI2.vue')
   },
   {
     path: '/compositionapi3',
     name: 'CompositionAPI3',
-    component: CompositionAPI3
+    component: () => import(/* webpackChunkName: "compositionapi3" */ '../views/CompositionAPI3.vue')
   },
   {
     path: '/compositionapi4',
     name: 'CompositionAPI4',
-    component: CompositionAPI4
+    component: () => import(/* webpackChunkName: "compositionapi4" */ '../views/CompositionAPI4.vue')
   },
   {
     path: '/compositionapiprovide',
     name: 'CompositionAPIProvide',
-    component: CompositionAPIProvide
+    component: () => import(/* webpackChunkName: "compositionapiprovide" */ '../views/CompositionAPIProvide.vue')
   },
   {
     path: '/compositionapiinject',
     name: 'CompositionAPIInject',
-    component: CompositionAPIInject
+    component: () => import(/* webpackChunkName: "compositionapiinject" */ '../views/CompositionAPIInject.vue')
   },
   {
     path: '/mixins',
     name: 'MixinS',
-    component: MixinS
+    component: () => import(/* webpackChunkName: "mixins" */ '../views/MixinS.vue')
   },
   {
     path: '/Component',
     name: 'Component',
-    component: Component
+    component: () => import(/* webpackChunkName: "Component" */ '../views/Component.vue')
   },
   {
     path: '/customdirective',
     name: 'CustomDirective',
-    component: CustomDirective
+    component: () => import(/* webpackChunkName: "customdirective" */ '../views/CustomDirective.vue')
   },
   {
     path: '/pluginstest',
     name: 'PluginsTest',
-    component: PluginsTest
+    component: () => import(/* webpackChunkName: "pluginstest" */ '../views/PluginsTest.vue')
   },
   {
     path: '/storeaccess',
     name: 'StoreAccess',
-    component: StoreAccess
+    component: () => import(/* webpackChunkName: "storeaccess" */ '../views/StoreAccess.vue')
   }
 ]
 
