@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router' // 라우터 추가
+import store from './store' // vuex 저장소 추가
 import mixins from './mixins' // 믹스인 추가
 import i18nPlugin from './plugins/i18n' // i18n 플러그인 추가
 
@@ -15,6 +16,7 @@ const i18nStrings = {
 
 const app = createApp(App);
 app.use(router)
+app.use(store)
 app.mixin(mixins)
 app.directive('focus', {
     mounted(el) {
