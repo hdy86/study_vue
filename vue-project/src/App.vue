@@ -31,7 +31,11 @@
     <router-link to="/customdirective">CustomDirective</router-link> | 
     <router-link to="/pluginstest">Plugins</router-link><br>
     
-    <router-link to="/StoreAccess">StoreAccess</router-link>
+    <router-link to="/StoreAccess">StoreAccess</router-link><br>
+
+    <router-link to="/kakaologin">KakaoLogin</router-link> |
+    <router-link to="/naverlogin">NaverLogin</router-link> |
+    <router-link to="/googlelogin">GoogleLogin</router-link>
   </nav>
   <router-view />
 </template>
