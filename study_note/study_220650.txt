@@ -49,23 +49,24 @@ status
 
 * Sequel Pro : Mac DB툴
   HeidSQL : Windows DB툴 (https://www.heidisql.com/)
+  
+* 마리아DB 다운로드
+https://mariadb.org/download
 
 데이터베이스 접속창
 Name: local-mariadb
 Host: IP주소입력
 Username: root
-Password: mariadb
-Port: 3306
+Password: root
+Port: 3306 (3306 포트가 이미 있어서, 3307 포트로 설정함)
 
 데이터베이스 생성
 Database Name: dev
-Database Encoding: UTF-8
+Database Encoding: UTF-8(utf8_general_ci)
 
 테이블 생성
-Table Name: t_user
+Table Name: t_product
+Table Name: t_seller
 
-* 마리아DB 다운로드
-https://mariadb.org/download
 
-root password: root
 
